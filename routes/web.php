@@ -21,10 +21,10 @@ Route::get('/register', function(){
 });
 
 // ===============Front end=============
-Route::get('/',[
-	'uses' => 'FrontEndController@index',
-	'as' => 'index'
-]);
+// Route::get('/',[
+// 	'uses' => 'FrontEndController@index',
+// 	'as' => 'index'
+// ]);
 
 // single post view
 
@@ -35,10 +35,10 @@ Route::get('/post/{slug}', [
 ]);
 
 //category page
-Route::get('/category/{id}', [
-	'uses' => 'FrontEndController@category',
-	'as' => 'category.single'
-]);
+// Route::get('/category/{id}', [
+// 	'uses' => 'FrontEndController@category',
+// 	'as' => 'category.single'
+// ]);
 
 // Tags page
 Route::get('/tag/{id}', [
@@ -73,11 +73,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 		'as' => 'home'
 	]);
 // create post page
-	Route::get('/post/create', [
+// 	Route::get('/post/create', [
 
-		'uses' => 'PostsController@create',
-		'as' => 'post.create'
-	]);
+// 		'uses' => 'PostsController@create',
+// 		'as' => 'post.create'
+// 	]);
 
 // Store post
 	Route::post('/post/store', [
@@ -101,11 +101,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	]);
 
 //Kill/parmanent delete Trashed posts
-	Route::get('/posts/kill/{id}',[
+// 	Route::get('/posts/kill/{id}',[
 
-		'uses' => 'PostsController@kill',
-		'as' => 'post.kill'
-	]);
+// 		'uses' => 'PostsController@kill',
+// 		'as' => 'post.kill'
+// 	]);
 
 //Restore post
 	Route::get('/posts/restore/{id}',[
@@ -185,11 +185,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	]);
 
 // Edit tag
-	Route::get('/tag/edit/{id}', [
+// 	Route::get('/tag/edit/{id}', [
 
-		'uses' => 'TagsController@edit',
-		'as' => 'tag.edit'
-	]);
+// 		'uses' => 'TagsController@edit',
+// 		'as' => 'tag.edit'
+// 	]);
 
 // Create tag page
 	Route::get('/tag/create', [
